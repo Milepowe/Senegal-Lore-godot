@@ -60,4 +60,5 @@ theme = ExtResource("2_0glhg")
 text = "Quitter"
 alignment = 0
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Charger Une Partie" to="." method="_on_charger_une_partie_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
