@@ -12,6 +12,3 @@ func _process(delta):
 
 func _on_quitter_pressed():
 	get_tree().quit()
-
-func _on_charger_une_partie_pressed():
-	#plus tard
