@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://25qukbb5cqgs"]
+
+[ext_resource type="Texture2D" uid="uid://cbo0lw1nhnscw" path="res://assests/ui/logo.png" id="1_78o0n"]
+[ext_resource type="Theme" uid="uid://bjjnqglehoku5" path="res://assests/ui/buttons/start_menu_button.tres" id="2_0glhg"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+texture = ExtResource("1_78o0n")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 33.0
+offset_top = 44.0
+offset_right = 140.0
+offset_bottom = 140.0
+auto_translate = false
+localize_numeral_system = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Charger Une Partie" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_0glhg")
+text = "Charger Une Partie"
+alignment = 0
+
+[node name="Nouvelle Partie" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_0glhg")
+text = "Nouvelle Partie"
+alignment = 0
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_0glhg")
+text = "Options"
+alignment = 0
+
+[node name="Quitter" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_0glhg")
+text = "Quitter"
+alignment = 0
