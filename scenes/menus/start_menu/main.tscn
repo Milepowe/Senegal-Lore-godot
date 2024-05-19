@@ -1,9 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://25qukbb5cqgs"]
+[gd_scene load_steps=6 format=3 uid="uid://25qukbb5cqgs"]
 
 [ext_resource type="Texture2D" uid="uid://cbo0lw1nhnscw" path="res://assests/ui/logo.png" id="1_78o0n"]
+[ext_resource type="Script" path="res://scenes/menus/start_menu/main.gd" id="1_aljbc"]
 [ext_resource type="Theme" uid="uid://bjjnqglehoku5" path="res://assests/ui/buttons/start_menu_button.tres" id="2_0glhg"]
 
+[sub_resource type="Gradient" id="Gradient_knk1b"]
+offsets = PackedFloat32Array(0.331731, 0.841346)
+colors = PackedColorArray(0, 0.129412, 0, 1, 0, 0.501961, 0.172549, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yuruv"]
+gradient = SubResource("Gradient_knk1b")
+fill_from = Vector2(0.850427, 0.222222)
+fill_to = Vector2(0.559829, 0)
+
 [node name="Main" type="Node2D"]
+script = ExtResource("1_aljbc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = SubResource("GradientTexture2D_yuruv")
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(160, 90)
@@ -11,9 +27,9 @@ texture = ExtResource("1_78o0n")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_left = 33.0
-offset_top = 44.0
+offset_top = 54.0
 offset_right = 140.0
-offset_bottom = 140.0
+offset_bottom = 118.0
 auto_translate = false
 localize_numeral_system = false
 
@@ -43,3 +59,5 @@ layout_mode = 2
 theme = ExtResource("2_0glhg")
 text = "Quitter"
 alignment = 0
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]

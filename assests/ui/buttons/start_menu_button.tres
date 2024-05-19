@@ -1,7 +1,19 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bjjnqglehoku5"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bjjnqglehoku5"]
 
 [ext_resource type="FontFile" uid="uid://busfihxoaro3e" path="res://assests/ui/fonts/m5x7.ttf" id="1_qg54w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n63mn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owkvk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_flpf4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_51uxg"]
 
 [resource]
 default_font = ExtResource("1_qg54w")
 default_font_size = 0
+Button/styles/focus = SubResource("StyleBoxEmpty_n63mn")
+Button/styles/hover = SubResource("StyleBoxEmpty_owkvk")
+Button/styles/normal = SubResource("StyleBoxEmpty_flpf4")
+Button/styles/pressed = SubResource("StyleBoxEmpty_51uxg")
