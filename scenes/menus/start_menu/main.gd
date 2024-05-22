@@ -14,6 +14,6 @@ func _process(_delta):
 	pass
 
 func _on_quitter_pressed():
-	$confirm.play()
-	await $confirm.finished
+	$menu_confirm.play()
+	await $menu_confirm.finished
 	get_tree().quit()

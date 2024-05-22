@@ -22,7 +22,7 @@ script = ExtResource("1_aljbc")
 stream = ExtResource("4_41jn5")
 volume_db = -5.0
 
-[node name="confirm" type="AudioStreamPlayer" parent="."]
+[node name="menu_confirm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_35fcc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
