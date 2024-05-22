@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://25qukbb5cqgs"]
+[gd_scene load_steps=8 format=3 uid="uid://25qukbb5cqgs"]
 
 [ext_resource type="Texture2D" uid="uid://cbo0lw1nhnscw" path="res://assests/ui/logo.png" id="1_78o0n"]
 [ext_resource type="Script" path="res://scenes/menus/start_menu/main.gd" id="1_aljbc"]
 [ext_resource type="Theme" uid="uid://bjjnqglehoku5" path="res://assests/ui/buttons/start_menu_button.tres" id="2_0glhg"]
+[ext_resource type="AudioStream" uid="uid://ceo23dugt8msv" path="res://assests/sound_effetcs/menu_confirm.mp3" id="3_35fcc"]
+[ext_resource type="AudioStream" uid="uid://b22631mph0lh5" path="res://assests/music/start_menu.mp3" id="4_41jn5"]
 
 [sub_resource type="Gradient" id="Gradient_knk1b"]
 offsets = PackedFloat32Array(0.331731, 0.841346)
@@ -15,6 +17,13 @@ fill_to = Vector2(0.559829, 0)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_aljbc")
+
+[node name="menu_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_41jn5")
+volume_db = -5.0
+
+[node name="confirm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_35fcc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 320.0
@@ -33,31 +42,31 @@ offset_bottom = 118.0
 auto_translate = false
 localize_numeral_system = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="buttons" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Charger Une Partie" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Charger Une Partie" type="Button" parent="MarginContainer/buttons"]
 layout_mode = 2
 theme = ExtResource("2_0glhg")
 text = "Charger Une Partie"
 alignment = 0
 
-[node name="Nouvelle Partie" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Nouvelle Partie" type="Button" parent="MarginContainer/buttons"]
 layout_mode = 2
 theme = ExtResource("2_0glhg")
 text = "Nouvelle Partie"
 alignment = 0
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Options" type="Button" parent="MarginContainer/buttons"]
 layout_mode = 2
 theme = ExtResource("2_0glhg")
 text = "Options"
 alignment = 0
 
-[node name="Quitter" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Quitter" type="Button" parent="MarginContainer/buttons"]
 layout_mode = 2
 theme = ExtResource("2_0glhg")
 text = "Quitter"
 alignment = 0
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="pressed" from="MarginContainer/buttons/Quitter" to="." method="_on_quitter_pressed"]
