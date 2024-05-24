@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 intro_msg_to_main_transition="*res://scenes/transitions/start_menu/black_fade.tscn"
+to_options="*res://scenes/transitions/options/bar_and_fade.tscn"
 
 [display]
 

@@ -1,5 +1,6 @@
 extends Node2D
 
+const options_menu = preload("res://scenes/menus/options/options.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,6 +13,14 @@ func _process(_delta):
 		$menu_music.play()
 	
 	pass
+
+func _on_options_pressed() :
+	$menu_confirm.play()
+	await $menu_confirm.finished
+	
+	to_options.transition_options()
+	await to_options.transition_finished
+	get_tree().change_scene_to_packed(options_menu)
 
 func _on_quitter_pressed():
 	$menu_confirm.play()

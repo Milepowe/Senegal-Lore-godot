@@ -20,6 +20,7 @@ script = ExtResource("1_aljbc")
 
 [node name="menu_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_41jn5")
+volume_db = -5.0
 
 [node name="menu_confirm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_35fcc")
@@ -65,6 +66,8 @@ alignment = 0
 [node name="Quitter" type="Button" parent="MarginContainer/buttons"]
 layout_mode = 2
 theme = ExtResource("2_0glhg")
+action_mode = 0
+button_mask = 0
 text = "Quitter"
 alignment = 0
 

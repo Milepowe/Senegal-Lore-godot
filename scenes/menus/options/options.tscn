@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwmf4ugdbgcej"]
+
+[ext_resource type="Script" path="res://scenes/menus/options/options.gd" id="1_74sod"]
+[ext_resource type="Texture2D" uid="uid://b0fy1i7svobh1" path="res://scenes/menus/options/options_logo.png" id="2_1yk7e"]
+[ext_resource type="AudioStream" uid="uid://cn3ma01hsb5kr" path="res://assests/music/options_menu.mp3" id="2_qdmgb"]
+
+[node name="Options" type="Node2D"]
+script = ExtResource("1_74sod")
+
+[node name="menu_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qdmgb")
+
+[node name="background" type="ColorRect" parent="."]
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0.501961, 0.172549, 1)
+
+[node name="black_bar" type="ColorRect" parent="."]
+offset_right = 320.0
+offset_bottom = 32.0
+color = Color(0, 0, 0, 1)
+
+[node name="OptionsLogo" type="Sprite2D" parent="."]
+position = Vector2(75, 15)
+texture = ExtResource("2_1yk7e")
