@@ -10,6 +10,7 @@ func _input(event):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#en gros c'est juste pour retourner en arrière car j'ai la flemme de coder un vrai menu mdr
 	await pressedConfirm
 	to_options.transition_back()
 	await to_options.transition_finished
