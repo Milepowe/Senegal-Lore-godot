@@ -68,7 +68,7 @@ project/assembly_name="Senegal Lore"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray()
 
 [filesystem]
 
