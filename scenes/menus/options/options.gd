@@ -12,7 +12,7 @@ func _ready():
 	await pressedConfirm
 	to_options.transition_back()
 	await to_options.transition_finished
-
+	get_tree().change_scene_to_file("res://scenes/menus/start_menu/main.tscn")
 
 func _process(_delta):
 	if $menu_music.playing == false :

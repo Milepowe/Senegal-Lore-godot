@@ -19,7 +19,8 @@ func _on_options_pressed() :
 	
 	to_options.transition_options()
 	await to_options.transition_finished
-
+	get_tree().change_scene_to_file("res://scenes/menus/options/options.tscn")
+	
 func _on_quitter_pressed():
 	$menu_confirm.play()
 	await $menu_confirm.finished
