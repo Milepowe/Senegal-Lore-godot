@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\scenes",
+    "\\scenes\\menus",
+    "\\scenes\\menus\\start_menu",
+    "\\scenes\\transitions",
+    "\\scenes\\transitions\\start_menu"
+  ],
+  "SelectedNode": "\\scenes\\menus\\start_menu\\intro_message.gd",
+  "PreviewInSolutionExplorer": false
+}
