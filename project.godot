@@ -23,7 +23,6 @@ config/icon="res://icon.svg"
 
 intro_msg_to_main_transition="*res://scenes/transitions/start_menu/black_fade.tscn"
 to_options="*res://scenes/transitions/options/bar_and_fade.tscn"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 sound_volume="*res://scripts/menu/volume.gd"
 
 [dialogic]
@@ -69,7 +68,7 @@ project/assembly_name="Senegal Lore"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/YATI/plugin.cfg")
 
 [filesystem]
 
