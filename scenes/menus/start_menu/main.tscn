@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://25qukbb5cqgs"]
+[gd_scene load_steps=9 format=3 uid="uid://25qukbb5cqgs"]
 
-[ext_resource type="Texture2D" uid="uid://bfrlg5hqxf127" path="res://assests/ui/logo.png" id="1_78o0n"]
+[ext_resource type="Texture2D" uid="uid://jdlw6eiocvsd" path="res://assests/ui/logo.png" id="1_78o0n"]
 [ext_resource type="Script" path="res://scenes/menus/start_menu/main.gd" id="1_aljbc"]
 [ext_resource type="Theme" uid="uid://bjjnqglehoku5" path="res://assests/ui/buttons/start_menu_button.tres" id="2_0glhg"]
-[ext_resource type="AudioStream" uid="uid://cpq7uj380hu4b" path="res://assests/music/main menu/midland.mp3" id="2_t0qyp"]
-[ext_resource type="AudioStream" uid="uid://daw7h1thg6kxg" path="res://assests/sound_effetcs/menu_confirm.mp3" id="3_35fcc"]
+[ext_resource type="AudioStream" uid="uid://bpvvxi73h6ewf" path="res://assests/music/main menu/midland.mp3" id="2_t0qyp"]
+[ext_resource type="AudioStream" uid="uid://bbmrpj37ha7wf" path="res://assests/sound_effetcs/menu_confirm.mp3" id="3_35fcc"]
+[ext_resource type="Script" path="res://scripts/menu/menu_control.gd" id="6_v4nep"]
 
 [sub_resource type="Gradient" id="Gradient_knk1b"]
 offsets = PackedFloat32Array(0.331731, 0.841346)
@@ -48,8 +49,10 @@ layout_mode = 2
 [node name="Charger Une Partie" type="Button" parent="MarginContainer/buttons"]
 layout_mode = 2
 theme = ExtResource("2_0glhg")
+button_mask = 0
 text = "Charger Une Partie"
 alignment = 0
+script = ExtResource("6_v4nep")
 
 [node name="Nouvelle Partie" type="Button" parent="MarginContainer/buttons"]
 layout_mode = 2

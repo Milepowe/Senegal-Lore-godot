@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://bjjnqglehoku5"]
 
-[ext_resource type="FontFile" uid="uid://qnhxv7uon3gb" path="res://assests/ui/fonts/m5x7.ttf" id="1_qg54w"]
+[ext_resource type="FontFile" uid="uid://b4251k2a2r35h" path="res://assests/ui/fonts/m5x7.ttf" id="1_qg54w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4boi"]
 draw_center = false
