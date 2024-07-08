@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwmf4ugdbgcej"]
 
 [ext_resource type="Script" path="res://scenes/menus/options/options.gd" id="1_74sod"]
-[ext_resource type="Texture2D" uid="uid://k8j7lt0125u1" path="res://assests/ui/submenus/options/options_logo.png" id="2_1yk7e"]
-[ext_resource type="AudioStream" uid="uid://1g078k35ckl" path="res://assests/music/options_menu.mp3" id="2_qdmgb"]
+[ext_resource type="Texture2D" uid="uid://b0fy1i7svobh1" path="res://assests/ui/submenus/options/options_logo.png" id="2_1yk7e"]
+[ext_resource type="AudioStream" uid="uid://cn3ma01hsb5kr" path="res://assests/music/options_menu.mp3" id="2_qdmgb"]
 [ext_resource type="Script" path="res://scripts/menu/volume.gd" id="4_ycxxn"]
 
 [node name="Options" type="Node2D"]
@@ -13,12 +13,12 @@ stream = ExtResource("2_qdmgb")
 bus = &"Music"
 
 [node name="background" type="ColorRect" parent="."]
-offset_right = 320.0
-offset_bottom = 180.0
+offset_right = 424.0
+offset_bottom = 240.0
 color = Color(0, 0.501961, 0.172549, 1)
 
 [node name="black_bar" type="ColorRect" parent="."]
-offset_right = 320.0
+offset_right = 424.0
 offset_bottom = 32.0
 color = Color(0, 0, 0, 1)
 
@@ -29,7 +29,7 @@ texture = ExtResource("2_1yk7e")
 [node name="music_slider" type="HSlider" parent="."]
 offset_left = 3.0
 offset_top = 51.0
-offset_right = 316.0
+offset_right = 417.0
 offset_bottom = 67.0
 min_value = 0.001
 max_value = 1.0
@@ -39,7 +39,7 @@ script = ExtResource("4_ycxxn")
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 3.0
 offset_top = 34.0
-offset_right = 113.0
+offset_right = 54.0
 offset_bottom = 54.0
 scale = Vector2(1.02772, 0.866286)
 text = "Music "
@@ -48,7 +48,7 @@ scroll_active = false
 [node name="sfx_slider" type="HSlider" parent="."]
 offset_left = 4.0
 offset_top = 91.0
-offset_right = 317.0
+offset_right = 417.0
 offset_bottom = 107.0
 value = 70.0
 

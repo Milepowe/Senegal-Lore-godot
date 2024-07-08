@@ -57,8 +57,8 @@ glossary/default_case_sensitive=true
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=180
+window/size/viewport_width=424
+window/size/viewport_height=240
 window/size/mode=2
 window/stretch/mode="viewport"
 

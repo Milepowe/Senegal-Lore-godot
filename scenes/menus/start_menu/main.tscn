@@ -1,15 +1,15 @@
 [gd_scene load_steps=9 format=3 uid="uid://25qukbb5cqgs"]
 
-[ext_resource type="Texture2D" uid="uid://jdlw6eiocvsd" path="res://assests/ui/logo.png" id="1_78o0n"]
+[ext_resource type="Texture2D" uid="uid://bfrlg5hqxf127" path="res://assests/ui/logo.png" id="1_78o0n"]
 [ext_resource type="Script" path="res://scenes/menus/start_menu/main.gd" id="1_aljbc"]
 [ext_resource type="Theme" uid="uid://bjjnqglehoku5" path="res://assests/ui/buttons/start_menu_button.tres" id="2_0glhg"]
-[ext_resource type="AudioStream" uid="uid://bpvvxi73h6ewf" path="res://assests/music/main menu/midland.mp3" id="2_t0qyp"]
-[ext_resource type="AudioStream" uid="uid://bbmrpj37ha7wf" path="res://assests/sound_effetcs/menu_confirm.mp3" id="3_35fcc"]
+[ext_resource type="AudioStream" uid="uid://cpq7uj380hu4b" path="res://assests/music/main menu/midland.mp3" id="2_t0qyp"]
+[ext_resource type="AudioStream" uid="uid://daw7h1thg6kxg" path="res://assests/sound_effetcs/menu_confirm.mp3" id="3_35fcc"]
 [ext_resource type="Script" path="res://scripts/menu/menu_control.gd" id="6_v4nep"]
 
 [sub_resource type="Gradient" id="Gradient_knk1b"]
-offsets = PackedFloat32Array(0.331731, 0.841346)
-colors = PackedColorArray(0, 0.129412, 0, 1, 0, 0.501961, 0.172549, 1)
+offsets = PackedFloat32Array(0.181818, 0.441558)
+colors = PackedColorArray(0, 0.501961, 0.172549, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_yuruv"]
 gradient = SubResource("Gradient_knk1b")
@@ -27,19 +27,19 @@ bus = &"Music"
 stream = ExtResource("3_35fcc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 320.0
-offset_bottom = 180.0
+offset_right = 424.0
+offset_bottom = 240.0
 texture = SubResource("GradientTexture2D_yuruv")
 
 [node name="Logo" type="Sprite2D" parent="."]
-position = Vector2(160, 90)
+position = Vector2(248, 116)
 texture = ExtResource("1_78o0n")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_left = 33.0
-offset_top = 54.0
-offset_right = 140.0
-offset_bottom = 118.0
+offset_left = 45.0
+offset_top = 80.0
+offset_right = 152.0
+offset_bottom = 144.0
 auto_translate = false
 localize_numeral_system = false
 
