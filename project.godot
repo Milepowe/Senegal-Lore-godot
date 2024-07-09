@@ -57,9 +57,11 @@ glossary/default_case_sensitive=true
 
 [display]
 
-window/size/viewport_width=424
-window/size/viewport_height=240
+window/size/viewport_width=480
+window/size/viewport_height=270
 window/size/mode=2
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="viewport"
 
 [dotnet]

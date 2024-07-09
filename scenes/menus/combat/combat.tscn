@@ -7,12 +7,12 @@
 [node name="Combat" type="Node2D"]
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-offset_right = 424.0
-offset_bottom = 240.0
+offset_right = 480.0
+offset_bottom = 270.0
 color = Color(0, 0.501961, 0.172549, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 424.0
+offset_right = 480.0
 offset_bottom = 19.0
 color = Color(0, 0, 0, 1)
 
@@ -25,11 +25,11 @@ theme = ExtResource("2_mbdq8")
 text = "Player turn"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(91, 130)
+position = Vector2(88, 153)
 texture = ExtResource("1_e4p7i")
 centered = false
 
 [node name="Missingno" type="Sprite2D" parent="."]
-position = Vector2(310, 44)
+position = Vector2(328, 55)
 texture = ExtResource("3_c60pb")
 centered = false

@@ -57,7 +57,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(-9.53674e-07, 1.78814e-07)
-scale = Vector2(1.325, 1.33333)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_rqpuj")
 centered = false
 hframes = 3
@@ -70,10 +70,10 @@ libraries = {
 }
 
 [node name="message" type="RichTextLabel" parent="."]
-offset_left = 114.0
-offset_top = 100.0
-offset_right = 305.0
-offset_bottom = 130.0
+offset_left = 142.0
+offset_top = 121.0
+offset_right = 333.0
+offset_bottom = 151.0
 auto_translate = false
 localize_numeral_system = false
 theme = ExtResource("3_blq8r")
