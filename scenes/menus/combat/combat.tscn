@@ -25,7 +25,7 @@ theme = ExtResource("2_mbdq8")
 text = "Player turn"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(88, 153)
+position = Vector2(94, 154)
 texture = ExtResource("1_e4p7i")
 centered = false
 

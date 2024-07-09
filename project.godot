@@ -21,7 +21,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-intro_msg_to_main_transition="*res://scenes/transitions/start_menu/black_fade.tscn"
+intro_msg_to_main_transition="*res://scenes/menus/start_menu/black_fade.tscn"
 to_options="*res://scenes/transitions/options/bar_and_fade.tscn"
 sound_volume="*res://scripts/menu/volume.gd"
 
