@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://25qukbb5cqgs"]
 
-[ext_resource type="Script" path="res://scripts/menu/main.gd" id="1_51p00"]
+[ext_resource type="Script" path="res://scripts/menu/main/main.gd" id="1_2ayuy"]
 [ext_resource type="Texture2D" uid="uid://bfrlg5hqxf127" path="res://assests/ui/logo.png" id="1_78o0n"]
 [ext_resource type="Theme" uid="uid://bjjnqglehoku5" path="res://assests/ui/buttons/start_menu_button.tres" id="2_0glhg"]
 [ext_resource type="AudioStream" uid="uid://cpq7uj380hu4b" path="res://assests/music/main menu/midland.mp3" id="2_t0qyp"]
 [ext_resource type="AudioStream" uid="uid://daw7h1thg6kxg" path="res://assests/sound_effetcs/menu_confirm.mp3" id="3_35fcc"]
-[ext_resource type="Script" path="res://scripts/menu/menu_control.gd" id="6_v4nep"]
+[ext_resource type="Script" path="res://scripts/menu/main/menu_control.gd" id="6_v4nep"]
 
 [sub_resource type="Gradient" id="Gradient_knk1b"]
 offsets = PackedFloat32Array(0.181818, 0.441558)
@@ -17,7 +17,7 @@ fill_from = Vector2(0.850427, 0.222222)
 fill_to = Vector2(0.559829, 0)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_51p00")
+script = ExtResource("1_2ayuy")
 
 [node name="menu_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_t0qyp")
