@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://bjjnqglehoku5" path="res://assests/ui/buttons/start_menu_button.tres" id="2_0glhg"]
 [ext_resource type="AudioStream" uid="uid://cpq7uj380hu4b" path="res://assests/music/main menu/midland.mp3" id="2_t0qyp"]
 [ext_resource type="AudioStream" uid="uid://daw7h1thg6kxg" path="res://assests/sound_effetcs/menu_confirm.mp3" id="3_35fcc"]
-[ext_resource type="Script" path="res://scripts/menu/main/menu_control.gd" id="6_v4nep"]
+[ext_resource type="Script" path="res://scripts/menu/main/menu_control.gd" id="6_we642"]
 
 [sub_resource type="Gradient" id="Gradient_knk1b"]
 offsets = PackedFloat32Array(0.181818, 0.441558)
@@ -52,7 +52,7 @@ theme = ExtResource("2_0glhg")
 button_mask = 0
 text = "Charger Une Partie"
 alignment = 0
-script = ExtResource("6_v4nep")
+script = ExtResource("6_we642")
 
 [node name="Nouvelle Partie" type="Button" parent="MarginContainer/buttons"]
 layout_mode = 2
