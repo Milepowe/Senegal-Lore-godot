@@ -9,19 +9,16 @@
 script = ExtResource("1_bdjml")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-visible = false
 offset_right = 480.0
 offset_bottom = 270.0
 color = Color(0, 0.501961, 0.172549, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 offset_right = 480.0
 offset_bottom = 19.0
 color = Color(0, 0, 0, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-visible = false
 offset_left = 6.0
 offset_top = 2.0
 offset_right = 105.0
@@ -30,13 +27,11 @@ theme = ExtResource("2_mbdq8")
 text = "Player turn"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(94, 154)
 texture = ExtResource("1_e4p7i")
 centered = false
 
 [node name="Missingno" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(328, 55)
 texture = ExtResource("3_c60pb")
 centered = false
