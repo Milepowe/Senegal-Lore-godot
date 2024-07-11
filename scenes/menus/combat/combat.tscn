@@ -44,9 +44,9 @@ text = "Player turn"
 metadata/_edit_use_anchors_ = true
 
 [node name="PlayerInfos" type="Polygon2D" parent="."]
-position = Vector2(51, 64)
+position = Vector2(48, 64)
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(328, 192, 336, 160, 416, 160, 408, 192)
+polygon = PackedVector2Array(328, 192, 336, 160, 424, 160, 416, 192)
 
 [node name="Name" type="RichTextLabel" parent="PlayerInfos"]
 offset_left = 338.0
@@ -57,13 +57,14 @@ theme = ExtResource("5_wgptg")
 text = "LePcDeNils"
 scroll_active = false
 
-[node name="HP" type="RichTextLabel" parent="PlayerInfos"]
+[node name="HPvalue" type="RichTextLabel" parent="PlayerInfos"]
 offset_left = 381.0
 offset_top = 168.0
-offset_right = 410.0
+offset_right = 423.0
 offset_bottom = 181.0
 theme = ExtResource("5_wgptg")
-text = "100/200"
+theme_override_colors/default_color = Color(0.372549, 0.803922, 0.894118, 1)
+text = "???/???HP"
 scroll_active = false
 
 [node name="HPbar" type="TextureProgressBar" parent="PlayerInfos"]
@@ -74,13 +75,14 @@ offset_bottom = 178.0
 texture_under = ExtResource("6_et5yw")
 texture_progress = ExtResource("7_cqw2l")
 
-[node name="SP" type="RichTextLabel" parent="PlayerInfos"]
+[node name="SPvalue" type="RichTextLabel" parent="PlayerInfos"]
 offset_left = 379.0
 offset_top = 176.0
-offset_right = 408.0
+offset_right = 417.0
 offset_bottom = 189.0
 theme = ExtResource("5_wgptg")
-text = "30/200"
+theme_override_colors/default_color = Color(0.843137, 0.482353, 0.729412, 1)
+text = "???/???SP"
 scroll_active = false
 
 [node name="SPbar" type="TextureProgressBar" parent="PlayerInfos"]
