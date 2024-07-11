@@ -97,3 +97,4 @@ confirm={
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=true

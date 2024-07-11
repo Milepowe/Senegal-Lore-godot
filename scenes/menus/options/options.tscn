@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/menu/volume.gd" id="4_ycxxn"]
 
 [node name="Options" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_74sod")
 
 [node name="menu_music" type="AudioStreamPlayer" parent="."]

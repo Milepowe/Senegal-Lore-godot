@@ -17,6 +17,7 @@ fill_from = Vector2(0.850427, 0.222222)
 fill_to = Vector2(0.559829, 0)
 
 [node name="Main" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_2ayuy")
 
 [node name="menu_music" type="AudioStreamPlayer" parent="."]

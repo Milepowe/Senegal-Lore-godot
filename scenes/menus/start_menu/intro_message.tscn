@@ -45,6 +45,7 @@ _data = {
 }
 
 [node name="Intro" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_q4vui")
 
 [node name="menu_woosh" type="AudioStreamPlayer" parent="."]

@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c587n8blubpct" path="res://assests/ui/combat/sp_bar_full.png" id="9_1bu58"]
 
 [node name="Combat" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_bdjml")
 
 [node name="Backgroud" type="ColorRect" parent="."]
@@ -35,6 +36,7 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TopInfos"]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 2.0
 offset_right = 105.0
@@ -46,7 +48,7 @@ metadata/_edit_use_anchors_ = true
 [node name="PlayerInfos" type="Polygon2D" parent="."]
 position = Vector2(48, 64)
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(328, 192, 336, 160, 424, 160, 416, 192)
+polygon = PackedVector2Array(328, 192, 336, 160, 392, 152, 424, 160, 416, 192, 360, 200)
 
 [node name="Name" type="RichTextLabel" parent="PlayerInfos"]
 offset_left = 338.0
