@@ -1,37 +1,92 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcsppd0rxf7n8"]
+[gd_scene load_steps=10 format=3 uid="uid://dcsppd0rxf7n8"]
 
 [ext_resource type="Script" path="res://scripts/menu/combat/combat.gd" id="1_bdjml"]
 [ext_resource type="Texture2D" uid="uid://bv3cm6bd7766o" path="res://assests/images/combat/bilel/bilel.png" id="1_e4p7i"]
 [ext_resource type="Theme" uid="uid://bcjm1ucnctuac" path="res://assests/ui/fonts/normal_size_text.tres" id="2_mbdq8"]
 [ext_resource type="Texture2D" uid="uid://qmt48r2hfddx" path="res://assests/images/combat/bilel/missingno.png" id="3_c60pb"]
+[ext_resource type="Theme" uid="uid://dfugkqc28o7wv" path="res://assests/ui/fonts/reduced_size_text.tres" id="5_wgptg"]
+[ext_resource type="Texture2D" uid="uid://d3psxgtwaeqfc" path="res://assests/ui/combat/hp_bar_empty.png" id="6_et5yw"]
+[ext_resource type="Texture2D" uid="uid://cnlyi8gl4rqy4" path="res://assests/ui/combat/hp_bar_full.png" id="7_cqw2l"]
+[ext_resource type="Texture2D" uid="uid://d1ld12kb58d6p" path="res://assests/ui/combat/sp_bar_empty.png" id="8_o6e83"]
+[ext_resource type="Texture2D" uid="uid://c587n8blubpct" path="res://assests/ui/combat/sp_bar_full.png" id="9_1bu58"]
 
 [node name="Combat" type="Node2D"]
 script = ExtResource("1_bdjml")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="Backgroud" type="ColorRect" parent="."]
 offset_right = 480.0
 offset_bottom = 270.0
 color = Color(0, 0.501961, 0.172549, 1)
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Bilel" type="Sprite2D" parent="."]
+position = Vector2(94, 154)
+texture = ExtResource("1_e4p7i")
+centered = false
+
+[node name="Missingno" type="Sprite2D" parent="."]
+position = Vector2(333, 70)
+texture = ExtResource("3_c60pb")
+centered = false
+
+[node name="TopInfos" type="ColorRect" parent="."]
 offset_right = 480.0
 offset_bottom = 19.0
 color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="TopInfos"]
 offset_left = 6.0
 offset_top = 2.0
 offset_right = 105.0
 offset_bottom = 15.0
 theme = ExtResource("2_mbdq8")
 text = "Player turn"
+metadata/_edit_use_anchors_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(94, 154)
-texture = ExtResource("1_e4p7i")
-centered = false
+[node name="PlayerInfos" type="Polygon2D" parent="."]
+position = Vector2(51, 64)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(328, 192, 336, 160, 416, 160, 408, 192)
 
-[node name="Missingno" type="Sprite2D" parent="."]
-position = Vector2(328, 55)
-texture = ExtResource("3_c60pb")
-centered = false
+[node name="Name" type="RichTextLabel" parent="PlayerInfos"]
+offset_left = 338.0
+offset_top = 160.0
+offset_right = 379.0
+offset_bottom = 172.0
+theme = ExtResource("5_wgptg")
+text = "LePcDeNils"
+scroll_active = false
+
+[node name="HP" type="RichTextLabel" parent="PlayerInfos"]
+offset_left = 381.0
+offset_top = 168.0
+offset_right = 410.0
+offset_bottom = 181.0
+theme = ExtResource("5_wgptg")
+text = "100/200"
+scroll_active = false
+
+[node name="HPbar" type="TextureProgressBar" parent="PlayerInfos"]
+offset_left = 336.0
+offset_top = 175.0
+offset_right = 376.0
+offset_bottom = 178.0
+texture_under = ExtResource("6_et5yw")
+texture_progress = ExtResource("7_cqw2l")
+
+[node name="SP" type="RichTextLabel" parent="PlayerInfos"]
+offset_left = 379.0
+offset_top = 176.0
+offset_right = 408.0
+offset_bottom = 189.0
+theme = ExtResource("5_wgptg")
+text = "30/200"
+scroll_active = false
+
+[node name="SPbar" type="TextureProgressBar" parent="PlayerInfos"]
+offset_left = 334.0
+offset_top = 183.0
+offset_right = 374.0
+offset_bottom = 186.0
+texture_under = ExtResource("8_o6e83")
+texture_progress = ExtResource("9_1bu58")
