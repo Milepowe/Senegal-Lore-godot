@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcsppd0rxf7n8"]
+[gd_scene load_steps=14 format=3 uid="uid://dcsppd0rxf7n8"]
 
 [ext_resource type="Script" path="res://scripts/menu/combat/combat.gd" id="1_bdjml"]
 [ext_resource type="Texture2D" uid="uid://bv3cm6bd7766o" path="res://assests/images/combat/bilel/bilel.png" id="1_e4p7i"]
@@ -9,11 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://cnlyi8gl4rqy4" path="res://assests/ui/combat/hp_bar_full.png" id="7_cqw2l"]
 [ext_resource type="Texture2D" uid="uid://d1ld12kb58d6p" path="res://assests/ui/combat/sp_bar_empty.png" id="8_o6e83"]
 [ext_resource type="Texture2D" uid="uid://c587n8blubpct" path="res://assests/ui/combat/sp_bar_full.png" id="9_1bu58"]
+[ext_resource type="Texture2D" uid="uid://dvcc5aeoldxj7" path="res://assests/ui/buttons/xbox_controller_a.png" id="10_l3amx"]
+[ext_resource type="Texture2D" uid="uid://bgktmsv0ix7vq" path="res://assests/ui/buttons/xbox_controller_b.png" id="11_7xv3a"]
+[ext_resource type="Texture2D" uid="uid://c8udvyhisafod" path="res://assests/ui/buttons/xbox_controller_x.png" id="12_x522l"]
+[ext_resource type="Texture2D" uid="uid://dq4slh841f2dl" path="res://assests/ui/buttons/xbox_controller_y.png" id="13_huqvv"]
 
 [node name="Combat" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_bdjml")
-metadata/_edit_horizontal_guides_ = [153.0, 50.0]
 
 [node name="Backgroud" type="ColorRect" parent="."]
 offset_right = 480.0
@@ -27,12 +30,12 @@ position = Vector2(87, 153)
 position = Vector2(348, 54)
 
 [node name="Bilel" type="Sprite2D" parent="."]
-position = Vector2(-37, 153)
+position = Vector2(87, 153)
 texture = ExtResource("1_e4p7i")
 centered = false
 
 [node name="Missingno" type="Sprite2D" parent="."]
-position = Vector2(480, 54)
+position = Vector2(348, 54)
 texture = ExtResource("3_c60pb")
 centered = false
 
@@ -52,12 +55,87 @@ theme = ExtResource("2_mbdq8")
 text = "Player turn"
 metadata/_edit_use_anchors_ = true
 
-[node name="PlayerInfos" type="Polygon2D" parent="."]
+[node name="SelectedPlayerButtons" type="Node2D" parent="."]
+
+[node name="PersonaButton" type="Polygon2D" parent="SelectedPlayerButtons"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(126, 168, 169, 143, 204, 160)
+
+[node name="XboxControllerY" type="Sprite2D" parent="SelectedPlayerButtons/PersonaButton"]
+position = Vector2(131, 160)
+texture = ExtResource("13_huqvv")
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SelectedPlayerButtons/PersonaButton"]
+offset_left = 151.0
+offset_top = 148.0
+offset_right = 212.0
+offset_bottom = 163.0
+theme = ExtResource("2_mbdq8")
+text = "Persona"
+
+[node name="ItemsButton" type="Polygon2D" parent="SelectedPlayerButtons"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(118, 181, 171, 167, 174, 186)
+
+[node name="XboxControllerX" type="Sprite2D" parent="SelectedPlayerButtons/ItemsButton"]
+position = Vector2(120, 174)
+texture = ExtResource("12_x522l")
+centered = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="SelectedPlayerButtons/ItemsButton"]
+offset_left = 138.0
+offset_top = 169.0
+offset_right = 199.0
+offset_bottom = 184.0
+theme = ExtResource("2_mbdq8")
+text = "Objets"
+
+[node name="GuardButton" type="Polygon2D" parent="SelectedPlayerButtons"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(126, 195, 207, 189, 203, 213)
+
+[node name="XboxControllerB" type="Sprite2D" parent="SelectedPlayerButtons/GuardButton"]
+position = Vector2(133, 191)
+texture = ExtResource("11_7xv3a")
+centered = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="SelectedPlayerButtons/GuardButton"]
+offset_left = 149.0
+offset_top = 190.0
+offset_right = 204.0
+offset_bottom = 205.0
+theme = ExtResource("2_mbdq8")
+text = "S'défendre"
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="AttackButton" type="Polygon2D" parent="SelectedPlayerButtons"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(118, 204, 187, 213, 163, 235)
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="SelectedPlayerButtons/AttackButton"]
+offset_left = 138.0
+offset_top = 207.0
+offset_right = 184.0
+offset_bottom = 222.0
+theme = ExtResource("2_mbdq8")
+text = "Attaquer "
+scroll_active = false
+
+[node name="XboxControllerA" type="Sprite2D" parent="SelectedPlayerButtons/AttackButton"]
+position = Vector2(123, 205)
+texture = ExtResource("10_l3amx")
+centered = false
+
+[node name="PlayerInfos" type="Node2D" parent="."]
+
+[node name="PlayerInfos" type="Polygon2D" parent="PlayerInfos"]
 position = Vector2(48, 64)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(328, 192, 336, 160, 392, 152, 424, 160, 416, 192, 360, 200)
 
-[node name="Name" type="RichTextLabel" parent="PlayerInfos"]
+[node name="Name" type="RichTextLabel" parent="PlayerInfos/PlayerInfos"]
 offset_left = 338.0
 offset_top = 160.0
 offset_right = 379.0
@@ -66,7 +144,7 @@ theme = ExtResource("5_wgptg")
 text = "LePcDeNils"
 scroll_active = false
 
-[node name="HPvalue" type="RichTextLabel" parent="PlayerInfos"]
+[node name="HPvalue" type="RichTextLabel" parent="PlayerInfos/PlayerInfos"]
 offset_left = 381.0
 offset_top = 168.0
 offset_right = 423.0
@@ -76,7 +154,7 @@ theme_override_colors/default_color = Color(0.372549, 0.803922, 0.894118, 1)
 text = "???/???HP"
 scroll_active = false
 
-[node name="HPbar" type="TextureProgressBar" parent="PlayerInfos"]
+[node name="HPbar" type="TextureProgressBar" parent="PlayerInfos/PlayerInfos"]
 offset_left = 336.0
 offset_top = 175.0
 offset_right = 376.0
@@ -84,7 +162,7 @@ offset_bottom = 178.0
 texture_under = ExtResource("6_et5yw")
 texture_progress = ExtResource("7_cqw2l")
 
-[node name="SPvalue" type="RichTextLabel" parent="PlayerInfos"]
+[node name="SPvalue" type="RichTextLabel" parent="PlayerInfos/PlayerInfos"]
 offset_left = 379.0
 offset_top = 176.0
 offset_right = 417.0
@@ -94,7 +172,7 @@ theme_override_colors/default_color = Color(0.843137, 0.482353, 0.729412, 1)
 text = "???/???SP"
 scroll_active = false
 
-[node name="SPbar" type="TextureProgressBar" parent="PlayerInfos"]
+[node name="SPbar" type="TextureProgressBar" parent="PlayerInfos/PlayerInfos"]
 offset_left = 334.0
 offset_top = 183.0
 offset_right = 374.0
@@ -102,12 +180,12 @@ offset_bottom = 186.0
 texture_under = ExtResource("8_o6e83")
 texture_progress = ExtResource("9_1bu58")
 
-[node name="PlayerInfos2" type="Polygon2D" parent="."]
+[node name="PlayerInfos2" type="Polygon2D" parent="PlayerInfos"]
 position = Vector2(-44, 64)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(328, 192, 336, 160, 392, 152, 424, 160, 416, 192, 360, 200)
 
-[node name="Name" type="RichTextLabel" parent="PlayerInfos2"]
+[node name="Name" type="RichTextLabel" parent="PlayerInfos/PlayerInfos2"]
 offset_left = 338.0
 offset_top = 160.0
 offset_right = 372.0
@@ -116,7 +194,7 @@ theme = ExtResource("5_wgptg")
 text = "pholder"
 scroll_active = false
 
-[node name="HPvalue" type="RichTextLabel" parent="PlayerInfos2"]
+[node name="HPvalue" type="RichTextLabel" parent="PlayerInfos/PlayerInfos2"]
 offset_left = 381.0
 offset_top = 168.0
 offset_right = 423.0
@@ -126,7 +204,7 @@ theme_override_colors/default_color = Color(0.372549, 0.803922, 0.894118, 1)
 text = "???/???HP"
 scroll_active = false
 
-[node name="HPbar" type="TextureProgressBar" parent="PlayerInfos2"]
+[node name="HPbar" type="TextureProgressBar" parent="PlayerInfos/PlayerInfos2"]
 offset_left = 336.0
 offset_top = 175.0
 offset_right = 376.0
@@ -134,7 +212,7 @@ offset_bottom = 178.0
 texture_under = ExtResource("6_et5yw")
 texture_progress = ExtResource("7_cqw2l")
 
-[node name="SPvalue" type="RichTextLabel" parent="PlayerInfos2"]
+[node name="SPvalue" type="RichTextLabel" parent="PlayerInfos/PlayerInfos2"]
 offset_left = 379.0
 offset_top = 176.0
 offset_right = 417.0
@@ -144,7 +222,7 @@ theme_override_colors/default_color = Color(0.843137, 0.482353, 0.729412, 1)
 text = "???/???SP"
 scroll_active = false
 
-[node name="SPbar" type="TextureProgressBar" parent="PlayerInfos2"]
+[node name="SPbar" type="TextureProgressBar" parent="PlayerInfos/PlayerInfos2"]
 offset_left = 334.0
 offset_top = 183.0
 offset_right = 374.0
@@ -152,12 +230,12 @@ offset_bottom = 186.0
 texture_under = ExtResource("8_o6e83")
 texture_progress = ExtResource("9_1bu58")
 
-[node name="PlayerInfos3" type="Polygon2D" parent="."]
+[node name="PlayerInfos3" type="Polygon2D" parent="PlayerInfos"]
 position = Vector2(22, 21)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(328, 192, 336, 160, 392, 152, 424, 160, 416, 192, 360, 200)
 
-[node name="Name" type="RichTextLabel" parent="PlayerInfos3"]
+[node name="Name" type="RichTextLabel" parent="PlayerInfos/PlayerInfos3"]
 offset_left = 338.0
 offset_top = 160.0
 offset_right = 379.0
@@ -166,7 +244,7 @@ theme = ExtResource("5_wgptg")
 text = "pholder"
 scroll_active = false
 
-[node name="HPvalue" type="RichTextLabel" parent="PlayerInfos3"]
+[node name="HPvalue" type="RichTextLabel" parent="PlayerInfos/PlayerInfos3"]
 offset_left = 381.0
 offset_top = 168.0
 offset_right = 423.0
@@ -176,7 +254,7 @@ theme_override_colors/default_color = Color(0.372549, 0.803922, 0.894118, 1)
 text = "???/???HP"
 scroll_active = false
 
-[node name="HPbar" type="TextureProgressBar" parent="PlayerInfos3"]
+[node name="HPbar" type="TextureProgressBar" parent="PlayerInfos/PlayerInfos3"]
 offset_left = 336.0
 offset_top = 175.0
 offset_right = 376.0
@@ -184,7 +262,7 @@ offset_bottom = 178.0
 texture_under = ExtResource("6_et5yw")
 texture_progress = ExtResource("7_cqw2l")
 
-[node name="SPvalue" type="RichTextLabel" parent="PlayerInfos3"]
+[node name="SPvalue" type="RichTextLabel" parent="PlayerInfos/PlayerInfos3"]
 offset_left = 379.0
 offset_top = 176.0
 offset_right = 417.0
@@ -194,7 +272,7 @@ theme_override_colors/default_color = Color(0.843137, 0.482353, 0.729412, 1)
 text = "???/???SP"
 scroll_active = false
 
-[node name="SPbar" type="TextureProgressBar" parent="PlayerInfos3"]
+[node name="SPbar" type="TextureProgressBar" parent="PlayerInfos/PlayerInfos3"]
 offset_left = 334.0
 offset_top = 183.0
 offset_right = 374.0
