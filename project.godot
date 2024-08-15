@@ -96,5 +96,5 @@ confirm={
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
+renderer/rendering_method="mobile"
 textures/default_filters/use_nearest_mipmap_filter=true
