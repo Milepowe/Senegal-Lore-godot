@@ -1,4 +1,5 @@
 # je vais faire genre j'ai compris gdscript mais bel il gere je pense -milepower 2024
+# j'ai enfin compris -milepower 2024
 extends Node2D
 
 const main_menu = preload("res://scenes/menus/start_menu/main.tscn")

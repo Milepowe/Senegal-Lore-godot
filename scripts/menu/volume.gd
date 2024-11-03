@@ -1,6 +1,6 @@
 extends HSlider
 
-# ca marche pas donc allez fix jsp
+# Changes the volume of an audio bus based on the bus index
 @export
 var bus_name: String
 
