@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyfqxuadintdj"]
+
+[ext_resource type="Script" path="res://scripts/start_menu/start_menu.gd" id="1_82kid"]
+[ext_resource type="Texture2D" uid="uid://c15x856fntg8k" path="res://assets/start_menu_logo.png" id="1_nm0ra"]
+[ext_resource type="Material" uid="uid://ds27gsfrhf16i" path="res://shaders/menus/start_menu_background.tres" id="1_tnkws"]
+[ext_resource type="FontFile" uid="uid://cblelicp8vylm" path="res://assets/fonts/uni_05_53.ttf" id="3_r7lvo"]
+
+[sub_resource type="Theme" id="Theme_k1ese"]
+default_font = ExtResource("3_r7lvo")
+
+[node name="StartMenu" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_82kid")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+texture_filter = 1
+material = ExtResource("1_tnkws")
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(0.0621, 0.23, 0.118067, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(240, 125)
+texture = ExtResource("1_nm0ra")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 152.0
+offset_top = 160.0
+offset_right = 328.0
+offset_bottom = 184.0
+theme = SubResource("Theme_k1ese")
+theme_override_colors/default_color = Color(1, 0.802833, 0.09, 1)
+text = "Appuyez sur Entrer."
+scroll_active = false

@@ -1,13 +1,34 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://bh0sfgi58lhj2"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://dstq4ls375sk4"]
+
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_7vg5w"]
+resource_name = "EQ"
+band_db/32_hz = -5.0
+band_db/100_hz = -5.0
+band_db/320_hz = -4.0
+band_db/1000_hz = -8.0
+band_db/3200_hz = -10.0
+band_db/10000_hz = -15.0
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_y8hj1"]
+resource_name = "Reverb"
+room_size = 0.2
+damping = 0.1
+spread = 0.7
+dry = 0.5
+wet = 0.4
 
 [resource]
-bus/1/name = &"Music"
+bus/1/name = &"music"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = 0.0672607
+bus/1/volume_db = 0.0
 bus/1/send = &"Master"
-bus/2/name = &"SFX"
+bus/1/effect/0/effect = SubResource("AudioEffectEQ_7vg5w")
+bus/1/effect/0/enabled = false
+bus/1/effect/1/effect = SubResource("AudioEffectReverb_y8hj1")
+bus/1/effect/1/enabled = false
+bus/2/name = &"sfx"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false

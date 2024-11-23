@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://otx526u2loxq"]
+
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_iwdon"]
+[ext_resource type="Texture2D" uid="uid://bkb51inopjj44" path="res://assets/player/player.png" id="2_q8sny"]
+
+[sub_resource type="Animation" id="Animation_21ey4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_1obcx"]
+resource_name = "default_down"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_qrqd1"]
+resource_name = "default_left"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_005jo"]
+resource_name = "default_right"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [11, 10, 9]
+}
+
+[sub_resource type="Animation" id="Animation_5xeyl"]
+resource_name = "default_up"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ynobl"]
+_data = {
+"RESET": SubResource("Animation_21ey4"),
+"default_down": SubResource("Animation_1obcx"),
+"default_left": SubResource("Animation_qrqd1"),
+"default_right": SubResource("Animation_005jo"),
+"default_up": SubResource("Animation_5xeyl")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4fcu"]
+size = Vector2(18, 12)
+
+[node name="Player" type="CharacterBody2D"]
+texture_filter = 1
+slide_on_ceiling = false
+floor_constant_speed = true
+script = ExtResource("1_iwdon")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_q8sny")
+hframes = 3
+vframes = 4
+frame = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_ynobl")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_l4fcu")
+debug_color = Color(0, 0.6, 0.701961, 0.188235)

@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://batk3wn800qd1"]
+
+[ext_resource type="Theme" uid="uid://c0q1r5m8rge3v" path="res://assets/themes/start_menu_buttons.tres" id="1_w60om"]
+[ext_resource type="Script" path="res://scripts/start_menu/select_menu.gd" id="1_xhhlc"]
+
+[node name="Node2D" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_xhhlc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(0.0621, 0.23, 0.118067, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 30.0
+offset_top = 55.0
+offset_right = 371.0
+offset_bottom = 211.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Continuer" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_w60om")
+text = "Continuer"
+alignment = 0
+
+[node name="Nouvelle Partie" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_w60om")
+text = "Nouvelle Partie"
+alignment = 0
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_w60om")
+text = "Options"
+alignment = 0
+
+[node name="Quitter" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_w60om")
+text = "Quitter"
+alignment = 0
