@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
-const speed = 120
+var baseSpeed = 120
 var axis = Vector2.ZERO
 var last_axis = "down"
+var runSpeed = 140
 
 func _physics_process(_delta: float) -> void:
 	move()
@@ -16,8 +17,13 @@ func get_input_axis() -> Vector2:
 func move() -> void:
 	axis = get_input_axis()
 	
+	# Time is money and running saves time
+	if Input.is_action_just_pressed("run"):
+		baseSpeed = runSpeed + baseSpeed	
+	if Input.is_action_just_released("run"):
+		baseSpeed = baseSpeed - runSpeed
 	if axis != Vector2.ZERO:
-		velocity = axis * speed
+		velocity = axis * baseSpeed
 	else:
 		velocity = Vector2.ZERO
 		
