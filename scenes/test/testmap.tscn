@@ -1,19 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfl4xf62p7e7"]
+[gd_scene load_steps=6 format=3 uid="uid://dfl4xf62p7e7"]
 
 [ext_resource type="PackedScene" uid="uid://otx526u2loxq" path="res://scenes/player/player.tscn" id="1_32x8j"]
 [ext_resource type="Texture2D" uid="uid://2b6lehesi3if" path="res://assets/images/map placeholder(je sais bien dessiner.png" id="1_dvyr3"]
-[ext_resource type="Script" path="res://scripts/ui/dialogs/DialogManager.gd" id="1_ppxmk"]
+[ext_resource type="Texture2D" uid="uid://bbly88bg6voe1" path="res://assets/images/placeholders/Youngster_W.webp" id="3_qxp4i"]
+[ext_resource type="PackedScene" uid="uid://uj7k8d6fjjfp" path="res://scenes/ui/dialogs/dialogs.tscn" id="5_d8ik0"]
+[ext_resource type="PackedScene" uid="uid://b6xu6qqjo6cc" path="res://scenes/ui/dialogs/area_2d.tscn" id="5_jsrrm"]
 
 [node name="Testmap" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_ppxmk")
 
 [node name="MapPlaceholder(jeSaisBienDessiner" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(-31, -7)
 texture = ExtResource("1_dvyr3")
 
+[node name="Control" parent="." instance=ExtResource("5_d8ik0")]
+offset_left = -42.0
+offset_top = -204.0
+offset_right = -42.0
+offset_bottom = -204.0
+scale = Vector2(1.09947, 1.09947)
+
 [node name="Player" parent="." instance=ExtResource("1_32x8j")]
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-7, -2)
+
+[node name="random ah npc" type="Sprite2D" parent="."]
+position = Vector2(208, -27)
+scale = Vector2(0.489583, 0.489583)
+texture = ExtResource("3_qxp4i")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="random ah npc"]
+offset_left = -153.192
+offset_top = -81.7022
+offset_right = 218.808
+offset_bottom = -41.7022
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "press enter while being near him to trigger dialog box"
+scroll_active = false
+
+[node name="Area2D" parent="." instance=ExtResource("5_jsrrm")]
+position = Vector2(208, -27)
+scale = Vector2(0.489583, 0.489583)
+text_key = "testText"

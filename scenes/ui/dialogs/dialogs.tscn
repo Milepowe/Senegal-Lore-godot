@@ -17,6 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fc647")
+scene_text_file = "res://assets/allDialogs.json"
 
 [node name="background" type="Polygon2D" parent="."]
 position = Vector2(30, -70)
@@ -26,16 +27,13 @@ polygon = PackedVector2Array(70, 251, 138, 248.264, 320, 251, 350, 196, 267, 199
 script = ExtResource("2_jv42n")
 
 [node name="Dialog_Text" type="RichTextLabel" parent="."]
-layout_mode = 0
 offset_left = 133.0
 offset_top = 195.0
 offset_right = 346.0
 offset_bottom = 251.0
 theme = SubResource("Theme_myy6g")
 bbcode_enabled = true
-text = "zdzdfzef (-thuj-(jrthj 
-rhtrerg ergrgr rgergergergr
-
+text = "no text 
 
 
 

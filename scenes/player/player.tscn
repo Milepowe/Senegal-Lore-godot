@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://otx526u2loxq"]
+[gd_scene load_steps=11 format=3 uid="uid://otx526u2loxq"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_iwdon"]
 [ext_resource type="Texture2D" uid="uid://dnid5q0bcmu0t" path="res://assets/player/player.png" id="2_q8sny"]
@@ -94,6 +94,8 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4fcu"]
 size = Vector2(18, 12)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4oe6"]
+
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 slide_on_ceiling = false
@@ -115,3 +117,10 @@ libraries = {
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_l4fcu")
 debug_color = Color(0, 0.6, 0.701961, 0.188235)
+
+[node name="DialogInteractionArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogInteractionArea"]
+shape = SubResource("RectangleShape2D_c4oe6")
