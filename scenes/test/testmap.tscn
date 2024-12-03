@@ -1,20 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfl4xf62p7e7"]
+[gd_scene load_steps=4 format=3 uid="uid://dfl4xf62p7e7"]
 
 [ext_resource type="PackedScene" uid="uid://otx526u2loxq" path="res://scenes/player/player.tscn" id="1_32x8j"]
-[ext_resource type="Texture2D" uid="uid://2b6lehesi3if" path="res://assests/images/placeholders/map placeholder(je sais bien dessiner.png" id="2_d4bgw"]
+[ext_resource type="Texture2D" uid="uid://2b6lehesi3if" path="res://assets/images/map placeholder(je sais bien dessiner.png" id="1_dvyr3"]
+[ext_resource type="Script" path="res://scripts/ui/dialogs/DialogManager.gd" id="1_ppxmk"]
 
 [node name="Testmap" type="Node2D"]
 texture_filter = 1
+script = ExtResource("1_ppxmk")
 
 [node name="MapPlaceholder(jeSaisBienDessiner" type="Sprite2D" parent="."]
-light_mask = 4
-visibility_layer = 4
-scale = Vector2(1.0373, 0.990741)
-texture = ExtResource("2_d4bgw")
+z_index = -1
+position = Vector2(-31, -7)
+texture = ExtResource("1_dvyr3")
 
 [node name="Player" parent="." instance=ExtResource("1_32x8j")]
-scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-7, -2)
-scale = Vector2(1, 1)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/ui/dialogs/dialogs.gd" id="1_fc647"]
 [ext_resource type="Script" path="res://scripts/ui/dialogs/dialog_background.gd" id="2_jv42n"]
-[ext_resource type="FontFile" uid="uid://dumpmieww8k2" path="res://assets/fonts/pixelmix.ttf" id="3_enqjh"]
+[ext_resource type="FontFile" uid="uid://ci2p2fyq60rs5" path="res://assets/fonts/pixelmix.ttf" id="3_enqjh"]
 
 [sub_resource type="Theme" id="Theme_myy6g"]
 default_font = ExtResource("3_enqjh")
@@ -25,7 +25,7 @@ color = Color(0.062, 0.3, 0.118, 1)
 polygon = PackedVector2Array(70, 251, 138, 248.264, 320, 251, 350, 196, 267, 199.375, 100, 196)
 script = ExtResource("2_jv42n")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Dialog_Text" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 133.0
 offset_top = 195.0

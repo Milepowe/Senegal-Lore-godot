@@ -24,7 +24,7 @@ var dialog_example = [
 
 func _ready() -> void :
 	default_polygon_coords = $background.polygon
-	$RichTextLabel.text = dialog_example[0]['text']
+	$Dialog_Text.text = dialog_example[0]['text']
 
 
 
